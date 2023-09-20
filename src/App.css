@@ -1,0 +1,143 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+body{
+  background: var(--color-bg); 
+}
+
+.gradient_bg{
+  /* global 92%+ browsers support */
+  background: var(--color-bg);
+}
+
+.gradient_text{
+  background: var(--gradient-text);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section_padding{
+  padding: 4rem 6rem;
+  border-bottom: .1px solid rgba(255, 255, 255, 0.18);
+}
+
+.section_margin{
+  margin: 4rem 6rem;
+}
+
+.flex_center{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.headtext{
+  color: var(--color-white);
+  font-family: var(--font-primary);
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.p_montserrat{
+  color: var(--color-white);
+  font-family: var(--font-base);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 166%; /* 33.2px */
+}
+
+span{
+  color: var(--color-accent);
+}
+
+.custom_button{
+  padding: 17px 52px;
+  color: var(--color-white);
+  background: var(--gradient-bar);
+  font-family: var(--font-base);
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #FFF;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+
+.scale-up-center {
+-webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@media screen and (max-width: 950px) {
+  .section_padding{
+      padding: 4rem;
+  }
+
+  .flex_center{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .headtext{
+    font-size: 62px;
+  }
+  
+  .section_margin{
+      margin: 4rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .section_padding{
+      padding: 4rem 2rem;
+  }
+
+  .headtext{
+    font-size: 32px;
+  }
+
+  .flex_center{
+    justify-content: center;
+  }
+  
+  .section_margin{
+      margin: 4rem;
+  }
+}
